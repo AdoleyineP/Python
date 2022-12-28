@@ -1,7 +1,7 @@
 #!/bin/python3
 import random
 
-
+#function to receive user input band determine computer choice
 def get_choices():
     player_choice = input("Enter a choice (rock,paper,scissors): ")
     options = ['rock', 'paper', 'scissors']
@@ -10,7 +10,7 @@ def get_choices():
     ), 'computer': computer_choice.upper().strip()}
     return choices
 
-
+#function to valid the user and computer choices
 def check_win(player, computer):
     print(f"You chose {player}, computer chose {computer}")
     if player == computer:
@@ -31,7 +31,9 @@ def check_win(player, computer):
         else:
             return "Rock smashes scissors! You lose!!!"
 
-
+#calls the get_choices function
 choices = get_choices()
+#stores the outcome of the game in the result variable
 result = check_win(choices["player"], choices["computer"])
+#outputs the final outcome
 print(result)
