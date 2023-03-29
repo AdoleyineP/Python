@@ -1,4 +1,4 @@
-number = int(input("Please enter the number >>"))
+number = int(input("Please enter the number >> "))
 
 factorial = number
 
